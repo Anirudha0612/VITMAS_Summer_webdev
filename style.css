@@ -1,0 +1,141 @@
+/* Reset + base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #000;
+  color: #eee;
+}
+
+a {
+  color: #e879f9;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #f0abfc;
+}
+
+/* Sticky top nav */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.navbar .logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #f0abfc;
+}
+
+.navbar nav a {
+  margin-left: 1.5rem;
+  font-size: 1rem;
+}
+
+/* Intro banner */
+.intro-banner {
+  background: #1a1a1a;
+  padding: 1rem 2rem;
+  text-align: center;
+  color: #e879f9;
+  font-weight: 500;
+}
+
+/* Roadmap container */
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Roadmap cards */
+.roadmap {
+  background: #111;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(255, 0, 255, 0.1);
+  overflow: hidden;
+  border: 1px solid #7e22ce;
+}
+
+.roadmap summary {
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background: #2a2a2a;
+  color: #f0abfc;
+  cursor: pointer;
+}
+
+.roadmap[open] summary {
+  background: #3f3f3f;
+}
+
+.steps {
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.step input[type="checkbox"] {
+  transform: scale(1.3);
+  accent-color: #e879f9;
+  cursor: pointer;
+}
+
+.step label {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: #111;
+  text-align: center;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar nav {
+    margin-top: 0.5rem;
+  }
+
+  .navbar nav a {
+    margin: 0 0.75rem 0.5rem 0;
+    display: inline-block;
+  }
+
+  .step label {
+    font-size: 0.95rem;
+  }
+}
